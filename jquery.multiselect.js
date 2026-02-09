@@ -838,7 +838,7 @@
                 }
 
                 selOpts.push(
-                    $.trim( select.find('option[value="'+ instance._escapeSelector( selectVals[ key ] ) +'"]').text() )
+                    select.find('option[value="'+ instance._escapeSelector( selectVals[ key ] ) +'"]').text().trim()
                 );
 
                 if( selOpts.length >= instance.options.maxPlaceholderOpts ) {
@@ -907,7 +907,7 @@
                 searchTerm += ' ' + option.value.toLowerCase();
             }
 
-            container.attr( 'data-search-term', $.trim( searchTerm ) ).prepend( thisOption );
+            container.attr( 'data-search-term', searchTerm.trim() ) ).prepend( thisOption );
 
             msOptCounter = msOptCounter + 1;
         },
