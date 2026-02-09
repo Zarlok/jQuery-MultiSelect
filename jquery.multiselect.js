@@ -322,7 +322,7 @@
                         }
 
                         // search non optgroup li's
-                        var searchString = $.trim( search.val().toLowerCase() );
+                        var searchString = search.val().toLowerCase().trim();
                         if( searchString ) {
                             optionsList.find('li[data-search-term*="'+ searchString +'"]:not(.optgroup)').removeClass('ms-hidden');
                             optionsList.find('li:not([data-search-term*="'+ searchString +'"], .optgroup)').addClass('ms-hidden');
